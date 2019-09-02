@@ -12,8 +12,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           brightness: Brightness.dark,
           primarySwatch: Colors.red,
-          accentColor: Colors.redAccent
+          accentColor: Colors.redAccent,
       ),
+      checkerboardOffscreenLayers: false,
+        checkerboardRasterCacheImages: false,
+        debugShowCheckedModeBanner: false,
+        debugShowMaterialGrid: false,
       home: TimePoor(),
     );
   }
