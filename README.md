@@ -1,17 +1,3 @@
-# time-poor
+# Time Poor
 
-
-### Design
-
-Begin with Web frontend, mobile friendly 
-
-Add project
-Timehseet button per project
-Add time
-Option for description (must not interupt the UI
-
-
-restful backend 
-
-/porjects put|post|get
-/timesheet{date}/entry |post|get
+A simple experimental flutter app. With the goal of tracking time aagaist differnt projects from different sources. Begining with local storage and moving to Jira etc. 
