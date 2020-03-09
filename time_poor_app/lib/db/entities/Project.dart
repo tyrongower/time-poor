@@ -63,9 +63,6 @@ class Project {
 
   static deleteProject(Project project) async {
     final db = await DBProvider.db.database;
-    //get the biggest id in the table
-    var table = await db.rawQuery("SELECT MAX(id)+1 as id FROM Project");
-    int id = table.first["id"];
     await db.delete("Project", where: "id = ?", whereArgs: [project.id]);
   }
 

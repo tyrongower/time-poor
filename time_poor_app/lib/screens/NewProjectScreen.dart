@@ -26,8 +26,7 @@ class _NewProject extends State {
                 const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
             child: Builder(
                 builder: (context) => SingleChildScrollView(
-
-                    child:  Column(
+                        child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: <Widget>[
                         TextField(
@@ -48,8 +47,11 @@ class _NewProject extends State {
                           controller: hoursController,
                         ),
                         MaterialColorPicker(
-                          selectedColor: new Color(int.tryParse(colorontroller.text)?? Colors.accents.first.value),
+                          selectedColor: new Color(
+                              int.tryParse(colorontroller.text) ??
+                                  Colors.accents.first.value),
                           allowShades: false,
+                          shrinkWrap: true,
                           colors: Colors.accents,
                           onMainColorChange: (v) {
                             debugPrint("One");
@@ -59,10 +61,9 @@ class _NewProject extends State {
                             debugPrint("two");
                             return colorontroller.text = v.value.toString();
                           },
-                          onBack: (){
+                          onBack: () {
                             debugPrint("three");
                           },
-
                         ),
                         MaterialButton(
                           onPressed: () async {
@@ -78,6 +79,10 @@ class _NewProject extends State {
                           child: Text("Save"),
                         ),
                       ],
-                    )))));
+                    )
+                )
+            )
+        )
+    );
   }
 }
